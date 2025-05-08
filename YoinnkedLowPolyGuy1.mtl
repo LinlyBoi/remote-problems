@@ -1,0 +1,22 @@
+# Blender 4.1.1 MTL File: 'YoinnkedLowPolyGuy1.blend'
+# www.blender.org
+
+newmtl Shirt
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd /home/linly/Nextcloud/College Related/Animation/Project/blender files/assets/textures/book_pattern_nor_gl_1k.exr
+
+newmtl Skin
+Ns 278.387421
+Ka 1.000000 1.000000 1.000000
+Kd 0.806948 0.514918 0.412543
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
