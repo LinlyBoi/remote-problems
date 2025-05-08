@@ -6,11 +6,11 @@
 [ext_resource type="AudioStream" uid="uid://bda1e85y0na7r" path="res://test_scene_assets/miau.ogg" id="3_dq0nh"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_e2q4g"]
-sky_top_color = Color(0.371817, 5.62528e-07, 9.62615e-08, 1)
-sky_horizon_color = Color(0.697213, 0.5, 0.52749, 1)
+sky_top_color = Color(0.980392, 0.631373, 0.184314, 1)
+sky_horizon_color = Color(0.256382, 0.6356, 0.862913, 1)
 sky_energy_multiplier = 0.85
-ground_bottom_color = Color(0.417035, 0, 0.109961, 1)
-ground_horizon_color = Color(0.697213, 0.5, 0.52749, 1)
+ground_bottom_color = Color(0.156863, 0.156863, 0.156863, 1)
+ground_horizon_color = Color(0.304335, 0.190138, 0.207261, 1)
 
 [sub_resource type="Sky" id="Sky_6brtm"]
 sky_material = SubResource("ProceduralSkyMaterial_e2q4g")
@@ -73,7 +73,7 @@ stream = ExtResource("3_dq0nh")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="TestPlace"]
 transform = Transform3D(1, 0, 0, 0, 0.849479, 0.527623, 0, -0.527623, 0.849479, 0, 3.38979, 3.26035)
-light_color = Color(0.585847, 1.8049e-06, 4.33177e-07, 1)
+light_color = Color(1, 0.469494, 0.401435, 1)
 light_energy = 3.101
 
 [node name="DirectionalLight3D2" type="DirectionalLight3D" parent="TestPlace"]
