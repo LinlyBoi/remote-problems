@@ -42,6 +42,14 @@ _subresources={
 "save_to_file/enabled": true,
 "save_to_file/path": "res://meshes/guy.res"
 }
+},
+"nodes": {
+"PATH:rig/Skeleton3D": {
+"rest_pose/external_animation_library": null
+},
+"PATH:rig/Skeleton3D/BASE_Low Poly Man": {
+"generate/physics": true
+}
 }
 }
 gltf/naming_version=1

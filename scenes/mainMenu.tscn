@@ -19,7 +19,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0, 0, 0, 1)
+color = Color(0.156863, 0.156863, 0.156863, 1)
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
@@ -35,17 +35,18 @@ offset_bottom = -123.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 24
-text = "my awesome game"
+text = "Remote Problems"
 
 [node name="Label2" type="Label" parent="Label"]
 layout_mode = 0
-offset_left = 134.0
-offset_top = 24.0
-offset_right = 224.0
-offset_bottom = 58.0
+offset_left = 62.0
+offset_top = 36.0
+offset_right = 291.0
+offset_bottom = 70.0
+scale = Vector2(0.64, 0.64)
 theme_override_colors/font_color = Color(0.934358, 0.934358, 7.70092e-07, 1)
 theme_override_font_sizes/font_size = 24
-text = "DELUXE"
+text = "Fine..I'll do it myself"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 0
