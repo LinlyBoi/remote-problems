@@ -31,6 +31,13 @@ offset_right = 145.0
 offset_bottom = 35.0
 horizontal_alignment = 1
 
+[node name="Pieces Collected" type="Label" parent="TextureRect"]
+offset_left = -558.0
+offset_top = 274.0
+offset_right = -461.0
+offset_bottom = 329.0
+theme_override_font_sizes/font_size = 40
+
 [node name="PauseNode" type="Control" parent="."]
 process_mode = 3
 visible = false

@@ -13,6 +13,8 @@ enum CharacterState {
 @onready var InteractRaycast := $head/RayCast3D
 @onready var camera := $head/Camera3D
 @onready var animator := $AnimationPlayer
+@onready var pieces_collected = 0
+@onready var TOTAL_PIECES = 8
 var currentBody : Interactible3D = null
 var currentState : CharacterState = CharacterState.WALKING
 @onready var SPEED = DEFAULT_SPEED # DEFAULT_SPEED doesn't load until _ready(), so we have to use @onready (you could also just move SPEED a bit to the bottom)
@@ -76,6 +78,7 @@ func _process_interact():
 		return
 	if collider == currentBody and not Input.is_action_just_pressed("interact"): # This is a bit hacky imo, but works
 		plrGUI.update_text(currentBody.InteractText)
+		#if collider.
 		return
 	
 	currentBody = collider
