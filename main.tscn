@@ -125,7 +125,7 @@ mesh = SubResource("PlaneMesh_vcox7")
 [node name="Pieces" type="Node3D" parent="Level1"]
 
 [node name="Piece1" type="CSGBox3D" parent="Level1/Pieces"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.95363, 1.11591, 2.06196)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.95363, 0.551487, 2.06196)
 use_collision = true
 size = Vector3(0.201775, 0.0473022, 0.202767)
 material = SubResource("StandardMaterial3D_yjcof")
@@ -144,7 +144,6 @@ size = Vector3(0.126278, 0.0473022, 0.0984538)
 material = SubResource("StandardMaterial3D_yjcof")
 
 [node name="Interactible3D" type="Area3D" parent="Level1/Pieces/Piece2"]
-script = ExtResource("4_q1cpj")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Level1/Pieces/Piece2/Interactible3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0178223, 0.0786743, 0.0214844)

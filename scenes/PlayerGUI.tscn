@@ -8,6 +8,21 @@
 [node name="PlayerGUI" type="CanvasLayer"]
 script = ExtResource("1_r6s6h")
 
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PiecesCounter" type="PanelContainer" parent="Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Control/PiecesCounter"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 40
+
 [node name="TextureRect" type="TextureRect" parent="."]
 anchors_preset = 8
 anchor_left = 0.5
@@ -30,13 +45,6 @@ offset_top = 12.0
 offset_right = 145.0
 offset_bottom = 35.0
 horizontal_alignment = 1
-
-[node name="Pieces Collected" type="Label" parent="TextureRect"]
-offset_left = -558.0
-offset_top = 274.0
-offset_right = -461.0
-offset_bottom = 329.0
-theme_override_font_sizes/font_size = 40
 
 [node name="PauseNode" type="Control" parent="."]
 process_mode = 3

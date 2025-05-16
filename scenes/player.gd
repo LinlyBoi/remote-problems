@@ -6,7 +6,8 @@ enum CharacterState {
 	SPRINTING = 1,
 	CROUCHING = 2
 }
-
+signal piece_collected
+var pieces_count: int = 0
 # All of the actually important stuff
 @onready var head := $head
 @onready var plrGUI := $PlayerGUI
@@ -36,6 +37,7 @@ func _ready():
 	#$MeshInstance3D.hide()
 	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
 	GameManager.player = self
+	add_to_group("player")
 
 func _physics_process(delta: float) -> void:
 	if !inputEnabled:
@@ -78,13 +80,17 @@ func _process_interact():
 		return
 	if collider == currentBody and not Input.is_action_just_pressed("interact"): # This is a bit hacky imo, but works
 		plrGUI.update_text(currentBody.InteractText)
-		#if collider.
+
 		return
 	
 	currentBody = collider
 	plrGUI.update_text(currentBody.InteractText)
 	if Input.is_action_just_pressed("interact") && currentBody.CanInteract:
 		currentBody.OnInteract.emit()
+		if collider.is_in_group("pieces"):
+			pieces_count += 1
+			piece_collected.emit(pieces_count)
+			collider._interact()
 
 @export var tilt_limit = deg_to_rad(75)
 func _unhandled_input(event : InputEvent):
@@ -138,4 +144,11 @@ func change_state(state : CharacterState):
 	
 	currentState = state
 
+#endregion
+
+#region Chungus counter
+func _on_piece_collected(count):
+	# This function will be called when a piece is collected
+	# You can perform any player-specific logic here if needed
+	print("Pieces collected: ", count)
 #endregion

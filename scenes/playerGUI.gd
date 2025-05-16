@@ -5,12 +5,24 @@ extends CanvasLayer
 @onready var pieces_collected = $"TextureRect/Pieces Collected"
 const DEBUG_TEMPLATE = "PlayerState: {plrstate}\nPlayerSpeed: {speed}\nGlobal Coordinates (X/Y/Z): {globalpos}\nFPS: {fps}"
 
-## Updates the hover text thing. Used internally for process_interact() in player.gd
-## Why we don't edit the label directly? who cares man it's not that big of a deal, it's just +1 picosecond of process time
+
+@onready var counter_label = $Control/PiecesCounter/Label  # Adjust path to your counter label
+
+func _ready():
+	# Find the player node and connect to its piece_collected signal
+	var player = get_tree().get_first_node_in_group("player")  # Make sure your player is in "player" group
+	if player:
+		player.piece_collected.connect(_update_counter)
+	
+	# Initialize counter
+	_update_counter(0)
+
+func _update_counter(count):
+	counter_label.text = str(count)
+
 func update_text(text : String) -> void:
 	label.text = text
-func add_piece() -> void:
-	pieces_collected.text = ""
+
 func _input(event) -> void:
 	if event.is_action_pressed("debug"):
 		debuginfo.visible = !debuginfo.visible
